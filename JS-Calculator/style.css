@@ -1,0 +1,62 @@
+/* border-boxing all elements before and after and setting font-family & weight*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(247, 255, 97), rgb(149, 89, 245));
+}
+/* To make the output adaptable to any number in input, we have to set the minmax to 120px and maximum value to auto*/
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* formatting & styling buttons properly */
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px, solid #ffffff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* buttons on hover */
+.calculator-grid > button:hover {
+  background-color: #a7a4a4;
+}
+/* AC button styling */
+.span-two {
+  grid-column: span 2;
+  color: #ff4141;
+  background-color: rgba(139, 0, 139, 0.8);
+}
+
+/* formatting & styling output screen */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
