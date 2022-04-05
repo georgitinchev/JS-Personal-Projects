@@ -8,10 +8,10 @@
   </thead>
   <tbody>
     {{#each contacts}}
-    <tr>
-      <td>{{this.name}}</td>
-      <td>{{this.number}}</td>
-    </tr>
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.number}}</td>
+      </tr>
     {{/each}}
   </tbody>
 </table>
@@ -21,13 +21,27 @@
     <div class="form-group">
       <label for="name" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-10">
-        <input type="text" autofocus="autofocus" name="name" title="Name" class="form-control" id="name" />
+        <input
+          type="text"
+          autofocus="autofocus"
+          name="name"
+          title="Name"
+          class="form-control"
+          id="name"
+        />
       </div>
     </div>
     <div class="form-group">
       <label for="number" class="col-lg-2 control-label">Number</label>
       <div class="col-lg-10">
-        <input type="text" autofocus="autofocus" name="number" title="Number" class="form-control" id="number" />
+        <input
+          type="text"
+          autofocus="autofocus"
+          name="number"
+          title="Number"
+          class="form-control"
+          id="number"
+        />
       </div>
     </div>
     <div class="form-group">
