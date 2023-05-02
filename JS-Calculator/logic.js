@@ -16,3 +16,21 @@ class Calculator {
       this.currentOperandTextElement = currentOperandTextElement
       this.clear()
   }
+
+  clear() {
+}
+
+delete() {
+}
+
+appendNumber(number) {
+}
+
+chooseOperation(operation) {
+}
+
+compute() {
+}
+
+updateDisplay() {
+}
